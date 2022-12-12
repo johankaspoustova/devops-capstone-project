@@ -16,7 +16,7 @@ jobs:
       postgres:
         image: postgres:alpine
         ports: 
-          - 5432: 5432
+          - 5432:5432
         env:
            POSTGRES_PASSWORD: pgs3cr3t
            POSTGRES_DB: testdb
@@ -25,7 +25,7 @@ jobs:
           --health-interval 10s
           --health-timeout 5s
           --health-retries 5
-          
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
